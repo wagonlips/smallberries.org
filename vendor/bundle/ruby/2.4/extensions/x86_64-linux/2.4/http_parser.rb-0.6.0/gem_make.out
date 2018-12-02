@@ -1,0 +1,21 @@
+current directory: /var/www/html/smallberries.org/vendor/bundle/ruby/2.4/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/usr/bin/ruby2.4 -r ./siteconf20181201-28188-o5xmwr.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/html/smallberries.org/vendor/bundle/ruby/2.4/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+rm -f 
+rm -f ruby_http_parser.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /var/www/html/smallberries.org/vendor/bundle/ruby/2.4/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+gcc -I. -I/usr/include/ruby/2.4 -I/usr/include/ruby/2.4/ruby/backward -I/usr/include/ruby/2.4 -I.   -fPIC -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -mtune=generic -fPIC -I/var/www/html/smallberries.org/vendor/bundle/ruby/2.4/gems/http_parser.rb-0.6.0/ext/ruby_http_parser -m64 -o ruby_http_parser.o -c ruby_http_parser.c
+gcc -I. -I/usr/include/ruby/2.4 -I/usr/include/ruby/2.4/ruby/backward -I/usr/include/ruby/2.4 -I.   -fPIC -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -mtune=generic -fPIC -I/var/www/html/smallberries.org/vendor/bundle/ruby/2.4/gems/http_parser.rb-0.6.0/ext/ruby_http_parser -m64 -o ryah_http_parser.o -c ryah_http_parser.c
+rm -f ruby_http_parser.so
+gcc -shared -o ruby_http_parser.so ruby_http_parser.o ryah_http_parser.o -L. -L/usr/lib64 -L. -fstack-protector -rdynamic -Wl,-export-dynamic -m64  -m64  -L/usr/lib64/ruby/2.4/ -L/usr/lib64/ruby/2.4/ -lruby  -lpthread -ldl -lcrypt -lm   -lc
+
+current directory: /var/www/html/smallberries.org/vendor/bundle/ruby/2.4/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+/bin/mkdir -p . ./.gem.20181201-28188-v050ag
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20181201-28188-v050ag

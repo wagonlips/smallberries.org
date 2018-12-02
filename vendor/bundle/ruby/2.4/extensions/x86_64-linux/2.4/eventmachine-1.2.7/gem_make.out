@@ -1,0 +1,21 @@
+current directory: /var/www/html/smallberries.org/vendor/bundle/ruby/2.4/gems/eventmachine-1.2.7/ext/fastfilereader
+/usr/bin/ruby2.4 -r ./siteconf20181201-28188-1jzd4h8.rb extconf.rb
+creating Makefile
+
+current directory: /var/www/html/smallberries.org/vendor/bundle/ruby/2.4/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" clean
+rm -f 
+rm -f fastfilereaderext.so  *.o  *.bak mkmf.log .*.time
+
+current directory: /var/www/html/smallberries.org/vendor/bundle/ruby/2.4/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR="
+g++ -I. -I/usr/include/ruby/2.4 -I/usr/include/ruby/2.4/ruby/backward -I/usr/include/ruby/2.4 -I. -DBUILD_FOR_RUBY -DOS_UNIX    -fPIC -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -mtune=generic -m64 -o mapper.o -c mapper.cpp
+g++ -I. -I/usr/include/ruby/2.4 -I/usr/include/ruby/2.4/ruby/backward -I/usr/include/ruby/2.4 -I. -DBUILD_FOR_RUBY -DOS_UNIX    -fPIC -O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector --param=ssp-buffer-size=4 -mtune=generic -m64 -o rubymain.o -c rubymain.cpp
+rm -f fastfilereaderext.so
+g++ -shared -o fastfilereaderext.so mapper.o rubymain.o -L. -L/usr/lib64 -L. -fstack-protector -rdynamic -Wl,-export-dynamic -m64  -m64  -L/usr/lib64/ruby/2.4/ -L/usr/lib64/ruby/2.4/ -lruby  -lpthread -ldl -lcrypt -lm   -lc
+
+current directory: /var/www/html/smallberries.org/vendor/bundle/ruby/2.4/gems/eventmachine-1.2.7/ext/fastfilereader
+make "DESTDIR=" install
+/bin/mkdir -p . ./.gem.20181201-28188-pqpoaz
+exit > .sitearchdir.time
+/usr/bin/install -c -m 0755 fastfilereaderext.so ./.gem.20181201-28188-pqpoaz
